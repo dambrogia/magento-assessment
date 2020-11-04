@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  local_dev_web:
+    image: domdambrogia/misc:m2-challenge-web-node
+    # build: ./services/web # This is the original image before it was committed to the cloud.
+    container_name: local_dev_web
+    depends_on: [ local_dev_db ]
+    networks: [ local_dev_net ]
+    ports: [ '3005:80', '2225:22' ]
+    privileged: true
+    volumes:
+      - './services/web/000-default.conf:/etc/apache2/sites-available/000-default.conf'
+      - '~/.ssh/id_rsa:/root/.ssh/id_rsa'
+      - '~/.composer/auth.json:/root/.composer/auth.json'
+      - '../:/var/www/html/'
+      # For performance reasons, consider using Mutagen rather than docker volume when not using linux. (comment out the line above if using mutagens)
+      # Once mutagen is installed, you can sync your files with the following
+      # mutagen sync create $(pwd) docker://local_dev_web/var/www/html
+      # Be sure to remove your sync before removing your containers or your files will delete!
+      # mutagen list; mutagen sync terminate <identifier from list command>
+
+  local_dev_db:
+    image: mysql:5.7
+    container_name: local_dev_db
+    networks: [ local_dev_net ]
+    ports: [ '3306:3306' ]
+    environment:
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_DATABASE: mage
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+
+networks:
+  local_dev_net:
