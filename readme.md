@@ -38,7 +38,7 @@ ___
 
 There are three options for submissions.
 
-My priority for both options is to keep previous submissions hidden from new candidates.
+My priority is to keep previous submissions hidden from new candidates.
 
 It saves me from wiping and recreating the repo after every assessment turned in.
 
