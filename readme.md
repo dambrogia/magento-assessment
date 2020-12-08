@@ -36,11 +36,7 @@ If you are unfamiliar with Travis, basically you need a composer auth.json file 
 ___
 ### How to work on this and submit it?
 
-There are three options for submissions.
-
-My priority is to keep previous submissions hidden from new candidates.
-
-It saves me from wiping and recreating the repo after every assessment turned in.
+There are three options for submissions. My priority is to keep previous submissions hidden from new candidates. It saves me from wiping and recreating the repo after every assessment turned in.
 
 You can:
 - Clone this repo, remove the `.git` directory create your own repo and send the link to that repo.
@@ -49,9 +45,7 @@ You can:
 
 ### _Please do not create a PR on this repository._ I can delete branches, I can not delete PRs.
 
-Please edit the instructions within the final section of this readme file so I know how to run and test your code.
-
-This is similar to the process we have for PRs.
+Please edit the instructions within the final section of this readme file so I know how to run and test your code. This is similar to the process we have for PRs.
 
 ___
 ### What am I being assessed for?
