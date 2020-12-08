@@ -36,16 +36,22 @@ If you are unfamiliar with Travis, basically you need a composer auth.json file 
 ___
 ### How to work on this and submit it?
 
-Clone the repo (do not fork) and create a branch (`assessment/<your_name>`).
+There are three options for submissions.
 
-*_Please do not create a PR._* I can delete branches, I can not delete PRs.
+My priority for both options is to keep previous submissions hidden from new candidates.
 
-Please edit the instructions within the final section of this readme file so I know how to run and test your code. This is similar to the process we have for PRs.
+It saves me from wiping and recreating the repo after every assessment turned in.
 
-Just to reiterate:
+You can:
+- Clone this repo, remove the `.git` directory create your own repo and send the link to that repo.
+- Fork this repo to a _private_ repository and provide access to your private fork
+- Clone this repo, branch off of master (`git checkout -b assessment/<your-name>`) and push a branch (`git push origin assessment/<your-name>`) to the origin _without making a PR_.
 
-- **Do not Fork. Do not create a PR. Create your own branch. Push your own branch to the origin.** 
-- **I will pull your branch locally to review and delete it on the origin like it never existed.**
+### _Please do not create a PR on this repository._ I can delete branches, I can not delete PRs.
+
+Please edit the instructions within the final section of this readme file so I know how to run and test your code.
+
+This is similar to the process we have for PRs.
 
 ___
 ### What am I being assessed for?
