@@ -59,3 +59,24 @@ On the other hand, this is only an assessment and this code will never reach a p
 ___
 ### Instructions:
 Add step by step instructions here on how to mindlessly test through your module.
+
+- Assuming docker initial setup, setup:upgrade and setup:di:compile has taken place.
+- Ensure that the cron is installed, running, and message consumers are running
+- Use the 2 examples below to trigger the modules producer/consumer logic
+- Command Line Interface example (see Module Readme for additional hints)
+```
+Usage Examples:
+bin/magento simple:queue:publish <entity_id>
+bin/magento simple:queue:publish 12
+bin/magento simple:queue:publish 47
+bin/magento simple:queue:publish 24
+```
+
+- Frontend examples (simply browse to a product via navigation, search or use one of the example urls below)
+```
+http://localhost:3005/go-get-r-pushup-grips.html
+http://localhost:3005/dual-handle-cardio-ball.html
+http://localhost:3005/harmony-lumaflex-trade-strength-band-kit.html
+http://localhost:3005/affirm-water-bottle.html
+```
+- Results are logged in file var/www/html/var/log/consumer.log
